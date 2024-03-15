@@ -12,6 +12,7 @@ jobs:
       - name: clone repository
         run: |
               sudo rm -rf /home/ubuntu/${{ github.event.repository.name }}
+              cd /home/ubuntu/
               sudo git clone https://${{ secrets.TOKEN }}@github.com/harunguter/${{ github.event.repository.name }}.git
       - name: docker build & run
         run: |
