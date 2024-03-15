@@ -38,3 +38,6 @@ scrape_configs:
     metrics_path: "/apisix/prometheus/metrics"
     static_configs:
       - targets: ["apisix:9091"]
+  - basic_auth:
+      username: "admin"
+      password: "5xc{36V/vxcQ"

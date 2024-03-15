@@ -60,9 +60,9 @@ authentication:
   expire_time: 3600     # jwt token expire time, in second
   users:                # yamllint enable rule:comments-indentation
     - username: admin   # username and password for login `manager api`
-      password: admin
+      password: 3)ob1(w;G@31
     - username: user
-      password: user
+      password: l3£3K4$r0!Il
 
 plugins:                          # plugin list (sorted in alphabetical order)
   - api-breaker
@@ -87,7 +87,7 @@ plugins:                          # plugin list (sorted in alphabetical order)
   - limit-count
   - limit-req
   # - log-rotate
-  # - node-status
+  - node-status
   - openid-connect
   - prometheus
   - proxy-cache
