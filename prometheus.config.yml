@@ -38,6 +38,12 @@ scrape_configs:
     metrics_path: "/apisix/prometheus/metrics"
     static_configs:
       - targets: ["apisix:9091"]
-  - basic_auth:
-      username: "admin"
-      password: "5xc{36V/vxcQ"
+  # - job_name: "fusion auth"
+  #   scrape_interval: 5s
+  #   scheme: https
+  #   metrics_path: api/prometheus/metrics
+  #   static_configs:
+  #     - targets: ['local.fusionauth.io']
+  #   basic_auth:
+  #     username: "admin"
+  #     password: "5xc{36V/vxcQ"

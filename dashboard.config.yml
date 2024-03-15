@@ -54,7 +54,7 @@ conf:
 
 authentication:
   secret:
-    secret              # secret for jwt token generation.
+   s!kr!tk3y            # secret for jwt token generation.
                         # NOTE: Highly recommended to modify this value to protect `manager api`.
                         # if it's default value, when `manager api` start, it will generate a random string to replace it.
   expire_time: 3600     # jwt token expire time, in second
