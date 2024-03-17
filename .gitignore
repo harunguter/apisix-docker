@@ -5,3 +5,5 @@
 !/etcd_data/.keep
 
 .DS_Store
+node_modules
+package-lock.json

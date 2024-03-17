@@ -70,6 +70,24 @@ services:
     networks:
       apisix:
 
+  webapp:
+    container_name: webapp
+    hostname: webapp
+    build:
+      context: ./web
+      dockerfile: ./Dockerfile
+    ports:
+      - "5000:5000"
+      - "5001:5001"
+      - "5002:5002"
+      - "5003:5003"
+      - "5004:5004"
+      - "5005:5005"
+      - "5006:5006"
+      - "5007:5007"
+      - "5008:5008"
+      - "5009:5009"
+
 networks:
   apisix:
     driver: bridge
