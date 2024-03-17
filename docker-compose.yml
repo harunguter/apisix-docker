@@ -6,7 +6,7 @@ services:
     container_name: dashboard
     restart: unless-stopped
     volumes:
-      - ./dashboard.config.yml:/usr/local/apisix-dashboard/conf/conf.yaml
+      - ./configs/dashboard.yml:/usr/local/apisix-dashboard/conf/conf.yaml
     ports:
       - "9000:9000"
     networks:
@@ -17,7 +17,7 @@ services:
     container_name: apisix
     restart: unless-stopped
     volumes:
-      - ./apisix.config.yml:/usr/local/apisix/conf/config.yaml:ro
+      - ./configs/apisix.yml:/usr/local/apisix/conf/config.yaml:ro
     depends_on:
       - etcd
     ##network_mode: host
@@ -51,7 +51,7 @@ services:
     container_name: prometheus
     restart: unless-stopped
     volumes:
-      - ./prometheus.config.yml:/etc/prometheus/prometheus.yml
+      - ./configs/prometheus.yml:/etc/prometheus/prometheus.yml
     ports:
       - "9090:9090"
     networks:
@@ -64,9 +64,9 @@ services:
     ports:
       - "3000:3000"
     volumes:
-      - "./grafana.config/provisioning:/etc/grafana/provisioning"
-      - "./grafana.config/dashboards:/var/lib/grafana/dashboards"
-      - "./grafana.config/config.ini:/etc/grafana/grafana.ini"
+      - "./configs/grafana/provisioning:/etc/grafana/provisioning"
+      - "./configs/grafana/dashboards:/var/lib/grafana/dashboards"
+      - "./configs/grafana/config.ini:/etc/grafana/grafana.ini"
     networks:
       apisix:
 
