@@ -9,7 +9,7 @@ jobs:
     name: deploy
     runs-on: web-server
     steps:
-      - name: clone repository
+      - name: pull repository
         run: |
               cd /home/ubuntu/${{ github.event.repository.name }}
               git pull
