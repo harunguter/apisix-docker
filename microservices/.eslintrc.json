@@ -16,7 +16,6 @@
         "guard-for-in": "off",
         "no-console": "off",
         "no-plusplus": "off",
-        "import/no-dynamic-require": "off",
-        
+        "import/no-dynamic-require": "off"
     }
 }

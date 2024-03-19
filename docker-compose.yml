@@ -81,6 +81,8 @@ services:
       - "5001:5001"
       - "5002:5002"
       - "5003:5003"
+    networks:
+      apisix:
 
 networks:
   apisix:
