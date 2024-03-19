@@ -1,4 +1,4 @@
-const databases = {
+module.exports = {
   orders: [
     {
       id: 10001,
